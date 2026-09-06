@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="GameHub - Khám phá những trò chơi miễn phí hấp dẫn"
+    >
+
+    <title>GameHub - Khám phá thế giới game</title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        <link rel="stylesheet" href="../style.css">
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         HEADER
+    ================================================== -->
+
+    <header class="header">
+
+        <div class="container header-container">
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <i class="fa-solid fa-gamepad"></i>
+
+                <span>GameHub</span>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Mở menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="nav"
+                id="mainNav"
+            >
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Trang chủ</span>
+
+                </a>
+
+
+                <a href="games.html">
+
+                    <i class="fa-solid fa-gamepad"></i>
+
+                    <span>Games</span>
+
+                </a>
+
+
+                <a href="profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Profile</span>
+
+                </a>
+
+
+                <a href="admin.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Admin</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- LOGIN -->
+
+    <div id="authArea" class="auth-area">
+
+        <a href="login.html" class="login-btn">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          Đăng nhập
+        </a>
+
+    </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         MAIN
+    ================================================== -->
+
+    <main>
+
+
+        <!-- ==================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+
+                <!-- HERO CONTENT -->
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                        GAME HUB 2026
+
+                    </span>
+
+
+                    <h1>
+
+                        Khám phá
+
+                        <span>
+                            thế giới game
+                        </span>
+
+                        của bạn
+
+                    </h1>
+
+
+                    <p>
+
+                        Tìm kiếm, khám phá và lưu lại
+                        những trò chơi yêu thích.
+                        GameHub giúp bạn tìm được
+                        game phù hợp với sở thích
+                        một cách nhanh chóng.
+
+                    </p>
+
+
+                    <!-- HERO BUTTONS -->
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="games.html"
+                            class="btn-primary"
+                        >
+
+                            <i
+                                class="fa-solid fa-gamepad"
+                            ></i>
+
+                            Khám phá game
+
+                        </a>
+
+
+                        <a
+                            href="#featured-games"
+                            class="btn-secondary"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-down"
+                            ></i>
+
+                            Xem nổi bật
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <i
+                            class="fa-solid fa-gamepad"
+                        ></i>
+
+                        <h3>
+                            GameHub
+                        </h3>
+
+                        <p>
+                            Your gaming world
+                        </p>
+
+                    </div>
+
+
+                    <div class="floating-card card-one">
+
+                        <i
+                            class="fa-solid fa-star"
+                        ></i>
+
+                        <span>
+                            Game nổi bật
+                        </span>
+
+                    </div>
+
+
+                    <div class="floating-card card-two">
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                        ></i>
+
+                        <span>
+                            Tìm kiếm dễ dàng
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SEARCH
+        ================================================== -->
+<section class="game-search-section">
+
+    <div class="container">
+
+        <span class="section-label">
+            GAME SEARCH
+        </span>
+
+        <h2>
+            Bạn đang tìm game gì?
+        </h2>
+
+        <div class="game-search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="gameSearchInput"
+                placeholder="Nhập tên game..."
+            >
+
+            <button
+                id="gameSearchBtn"
+                type="button"
+            >
+                Tìm kiếm
+            </button>
+
+        </div>
+
+        <!-- KẾT QUẢ TÌM KIẾM -->
+
+        <div
+            id="searchResults"
+            class="game-grid"
+        ></div>
+
+    </div>
+
+</section>
+
+
+        <!-- ==================================================
+             FEATURED GAMES
+        ================================================== -->
+
+        <section
+            class="featured-games"
+            id="featured-games"
+        >
+
+            <div class="container">
+
+
+                <!-- SECTION TITLE -->
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            FEATURED GAMES
+                        </span>
+
+                        <h2>
+                            Game nổi bật
+                        </h2>
+
+                        <p>
+                            Một số trò chơi được lấy
+                            trực tiếp từ dữ liệu FreeToGame.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="games.html"
+                        class="view-all"
+                    >
+
+                        Xem tất cả
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                        ></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- GAME LIST -->
+
+                <div
+                    class="game-grid"
+                    id="homeGameList"
+                >
+
+                    <div class="loading">
+
+                        <i
+                            class="fa-solid fa-spinner fa-spin"
+                        ></i>
+
+                        <p>
+                            Đang tải game...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             CATEGORIES
+        ================================================== -->
+
+        <section class="categories-section">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            CATEGORIES
+                        </span>
+
+                        <h2>
+                            Khám phá theo thể loại
+                        </h2>
+
+                        <p>
+                            Chọn thể loại bạn yêu thích
+                            để tìm game phù hợp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="category-list">
+
+    <!-- BẮN SÚNG -->
+    <a href="games.html?category=shooter" class="category-card">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-crosshairs"></i>
+        </div>
+
+        <div>
+            <h3>Bắn súng</h3>
+            <p>Shooter</p>
+        </div>
+
+        <div class="category-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- MMORPG -->
+    <a href="games.html?category=mmorpg" class="category-card">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-dragon"></i>
+        </div>
+
+        <div>
+            <h3>MMORPG</h3>
+            <p>Multiplayer RPG</p>
+        </div>
+
+        <div class="category-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- CHIẾN THUẬT -->
+    <a href="games.html?category=strategy" class="category-card">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-chess"></i>
+        </div>
+
+        <div>
+            <h3>Chiến thuật</h3>
+            <p>Strategy</p>
+        </div>
+
+        <div class="category-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- ĐUA XE -->
+    <a href="games.html?category=racing" class="category-card">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-car"></i>
+        </div>
+
+        <div>
+            <h3>Đua xe</h3>
+            <p>Racing</p>
+        </div>
+
+        <div class="category-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- MOBA -->
+    <a href="games.html?category=moba" class="category-card">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div>
+            <h3>MOBA</h3>
+            <p>Multiplayer Online Battle Arena</p>
+        </div>
+
+        <div class="category-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- THỂ THAO -->
+    <a href="games.html?category=sports" class="category-card">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-futbol"></i>
+        </div>
+
+        <div>
+            <h3>Thể thao</h3>
+            <p>Sports</p>
+        </div>
+
+        <div class="category-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- SINH TỒN -->
+    <a href="games.html?category=survival" class="category-card">
+
+        <div class="category-icon">
+            <i class="fa-solid fa-person-running"></i>
+        </div>
+
+        <div>
+            <h3>Sinh tồn</h3>
+            <p>Survival</p>
+        </div>
+
+        <div class="category-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+</div>
+
+
+        <!-- ==================================================
+             WHY GAMEHUB
+        ================================================== -->
+
+        <section class="features-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            WHY GAMEHUB?
+                        </span>
+
+                        <h2>
+                            Vì sao nên sử dụng GameHub?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="features-grid">
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i
+                                class="fa-solid fa-magnifying-glass"
+                            ></i>
+
+                        </div>
+
+                        <h3>
+                            Tìm kiếm nhanh
+                        </h3>
+
+                        <p>
+                            Tìm game theo tên hoặc
+                            thể loại một cách nhanh chóng.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i
+                                class="fa-solid fa-filter"
+                            ></i>
+
+                        </div>
+
+                        <h3>
+                            Lọc theo thể loại
+                        </h3>
+
+                        <p>
+                            Dễ dàng lựa chọn game
+                            phù hợp với sở thích.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i
+                                class="fa-solid fa-heart"
+                            ></i>
+
+                        </div>
+
+                        <h3>
+                            Lưu game yêu thích
+                        </h3>
+
+                        <p>
+                            Quản lý những game bạn
+                            yêu thích trong Profile.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i
+                                class="fa-solid fa-robot"
+                            ></i>
+
+                        </div>
+
+                        <h3>
+                            AI hỗ trợ
+                        </h3>
+
+                        <p>
+                            Nhận gợi ý game phù hợp
+                            thông qua trợ lý AI.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             CTA
+        ================================================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div>
+
+                        <span>
+                            START YOUR JOURNEY
+                        </span>
+
+                        <h2>
+                            Sẵn sàng khám phá?
+                        </h2>
+
+                        <p>
+                            Hàng trăm trò chơi đang chờ bạn.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="games.html"
+                        class="btn-primary"
+                    >
+
+                        Khám phá ngay
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                        ></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- ABOUT -->
+
+                <div class="footer-about">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+
+                        <i
+                            class="fa-solid fa-gamepad"
+                        ></i>
+
+                        <span>
+                            GameHub
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        GameHub là nền tảng khám phá game,
+                        giúp người dùng tìm kiếm, khám phá
+                        và quản lý những trò chơi yêu thích.
+                    </p>
+
+                </div>
+
+
+
+                <!-- NAVIGATION -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Điều hướng
+                    </h3>
+
+                    <a href="index.html">
+                        Trang chủ
+                    </a>
+
+                    <a href="games.html">
+                        Games
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                </div>
+
+
+
+                <!-- SUPPORT -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Hỗ trợ
+                    </h3>
+
+                    <a href="#">
+                        Trợ giúp
+                    </a>
+
+                    <a href="#">
+                        Liên hệ
+                    </a>
+
+                    <a href="#">
+                        Điều khoản
+                    </a>
+
+                </div>
+
+
+
+                <!-- DATA -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Dữ liệu
+                    </h3>
+
+                    <p>
+                        Dữ liệu trò chơi được cung cấp
+                        thông qua FreeToGame API.
+                    </p>
+
+                    <a
+                        href="https://www.freetogame.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        FreeToGame
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 GameHub.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="../js/main.js"></script>
+
+<!-- ================= AI CHATBOX ================= -->
+
+<div class="ai-widget">
+
+    <button
+        id="aiToggle"
+        class="ai-toggle"
+        aria-label="Mở trợ lý AI"
+    >
+        <i class="fa-solid fa-robot"></i>
+    </button>
+
+
+    <div
+        id="aiBox"
+        class="ai-box"
+    >
+
+        <div class="ai-header">
+
+            <div>
+
+                <i class="fa-solid fa-robot"></i>
+
+                <strong>
+                    GameHub AI
+                </strong>
+
+            </div>
+
+
+            <button
+                id="aiClose"
+                type="button"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div
+            id="aiMessages"
+            class="ai-messages"
+        >
+
+            <div class="ai-message bot">
+
+                🤖 Xin chào! Mình là trợ lý GameHub.
+
+                <br><br>
+
+                Bạn có thể hỏi mình về:
+
+                <br>
+                • Game bắn súng
+                <br>
+                • Game MMORPG
+                <br>
+                • Game chiến thuật
+                <br>
+                • Game đua xe
+                <br>
+                • Game cho máy yếu
+
+            </div>
+
+        </div>
+
+
+        <div class="ai-input">
+
+            <input
+                type="text"
+                id="aiInput"
+                placeholder="Hỏi GameHub AI..."
+                autocomplete="off"
+            >
+
+            <button
+                id="aiSend"
+                type="button"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="../js/ai.js"></script>
+
+
+</body>
+
+</html>
